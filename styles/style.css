@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+body {
+  font-family: "Roboto Mono", cursive;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  background: url("../assets/stacked-steps-haikei\ \(1\).svg");
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: white !important;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  background-color: #426817e5;
+  opacity: 0.6;
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index: -1;
+}
+a{
+  text-decoration: none;
+}
+button,
+select {
+  font-family: "Roboto Mono", cursive;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 7px;
+  background-color: lightgray;
+  border:none;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.the_select , .start-btn   , .start-btn a{
+  background-color: #fff;
+  color:#426817e5;
+  padding:5px 10px;
+}
+.start-btn{
+  transition: all .4s ease;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+}
+.start-btn:hover{
+  opacity: .5;
+}
+option{
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+select {
+  padding: 5px;
+}
+
+.home-banner,
+.js-logo {
+  width: auto;
+  height: 10rem;
+}
+
+.intro-images-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.intro-images-container:nth-child(1){
+  border-top-left-radius: 5px;
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100vw;
+}
+
+.intro-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.intro-text-container  h1{
+  font-weight:700;
+  text-transform: uppercase;
+}
+.legal-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 70vw;
+  margin: 20px;
+  font-size:1.3rem;
+  font-weight: 600;
+  font-family: "Roboto Mono", cursive;
+}
+
+.difficulty-level {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+}
+
+.correct-answer,
+.incorrect-answer,
+.answer-btn {
+  margin: 10px;
+}
+
+.answer-btn {
+  width: 250px;
+  height: 50px;
+  font-size: 0.7rem;
+  text-shadow: none;
+}
+
+.correct-answer,
+.incorrect-answer {
+  padding: 10px;
+  background-color: black;
+  font-size: 1.2rem;
+  border-radius: 7px;
+}
+
+.correct-answer {
+  color: rgb(53, 236, 53);
+}
+
+.incorrect-answer {
+  color: rgb(236, 62, 62);
+}
+
+.all-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  line-height: 2.5rem;
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+.question-text {
+  width: 80%;
+}
+
+.status-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #03001c;
+  border-radius: 7px;
+  color: white;
+}
+
+.low-threat,
+.high-health {
+  color: green;
+}
+
+.medium-threat,
+.medium-health {
+  color: orange;
+}
+
+.high-threat,
+.low-health {
+  color: red;
+}
+
+
+/* Game Edits css */
+
+.all-container{
+  justify-content: space-between;
+  height: 100%;
+  width:100%;
+}
+.game-container{
+  width:50%;
+  height:100%;
+}
+
+.feedback-container{
+  width:50% !important;
+  height:100vh !important;
+}
+canvas{
+  height:100vh !important;
+  width:100% !important;
+  object-fit: cover;
+}
+
+.status-container{
+  margin: 0px !important;
+  margin-top: -10px !important;
+  border-radius: 0px !important;
+  font-size: 1.4rem;
+}
+.question-container h2{
+  font-size: 1.4rem;
+  background-color: #03001c;
+  border-radius: 5px;
+  padding: 15px;
+
+}
+
+form button{
+  font-size: 1rem  !important;
+  background-color: #fff;
+  color: #426817e5;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+form button:hover{
+  transform:scale(1.1)
+}
+
+@media (max-width: 480px) {
+
+  /* customs of cdabir */
+  body{
+    overflow: auto;
+  }
+  .feedback-container{
+    width: 100% !important;
+  }
+  canvas{
+    display: none;
+  }
+  /* customs of cdabir  end*/
+
+  .intro-images-container {
+    flex-direction: column;
+  }
+
+  .intro-container {
+    height: 100%;
+  }
+
+  .intro-text-container {
+    height: 100%;
+  }
+
+  .legal-footer {
+    width: 100%;
+  }
+
+  .all-container {
+    flex-direction: column;
+  }
+
+  .feedback-container {
+    height: 100%;
+  }
+
+  .question-container {
+    height: 100%;
+  }
+
+  .status-container {
+    flex-direction: column;
+  }
+}
